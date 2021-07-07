@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TZAnagram", "TZAnagram\TZAnagram.csproj", "{81F9F903-C7DB-494C-BD48-DC0BB49A6103}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TZAnagram", "TZAnagram\TZAnagram.csproj", "{81F9F903-C7DB-494C-BD48-DC0BB49A6103}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnagramsTests", "AnagramsTests\AnagramsTests.csproj", "{20AB105E-C7B4-4411-8B25-B1CEFBD0EEA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{81F9F903-C7DB-494C-BD48-DC0BB49A6103}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81F9F903-C7DB-494C-BD48-DC0BB49A6103}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81F9F903-C7DB-494C-BD48-DC0BB49A6103}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20AB105E-C7B4-4411-8B25-B1CEFBD0EEA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20AB105E-C7B4-4411-8B25-B1CEFBD0EEA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20AB105E-C7B4-4411-8B25-B1CEFBD0EEA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20AB105E-C7B4-4411-8B25-B1CEFBD0EEA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

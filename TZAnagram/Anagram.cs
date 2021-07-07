@@ -9,24 +9,24 @@ namespace TZAnagram
     {
         public static bool IsAnagram(string str1, string str2)
         {
-            if (!Regex.IsMatch(str1, ValidationException.PatternRegisterDownCheck) ||
-                    !Regex.IsMatch(str2, ValidationException.PatternRegisterDownCheck) ||
-                    (str1.Length <= 3 && str1.Length <= 100) || (str2.Length <= 3 && str2.Length <= 100))
-            {
-                Console.WriteLine("Invalid string format entered");
-                return false;
-            }
-
             if (str1 == null || str2 == null)
             {
                 Console.WriteLine("Some input parameter is null ");
                 return false;
             }
 
+            if (!Regex.IsMatch(str1, ValidationException.PatternRegisterDownCheck) ||
+                    !Regex.IsMatch(str2, ValidationException.PatternRegisterDownCheck) ||
+                    (str1.Length < 3 || str1.Length > 100) || (str2.Length < 3 || str2.Length > 100))
+            {
+                Console.WriteLine("Invalid string format entered");
+                return false;
+            }
+
             str1 = str1.Trim();
             str2 = str2.Trim();
 
-            if (str1.Length != str2.Length || str1.Length == 0 || str2.Length == 0)
+            if (str1.Length != str2.Length)
             {
                 Console.WriteLine("Invalid string format entered");
                 return false;
@@ -56,7 +56,13 @@ namespace TZAnagram
 
         public static int[,] GetNumberAnagrams(string str)
         {
-            if (!Regex.IsMatch(str, ValidationException.PatternRegisterDownCheck) || (str.Length <= 3 && str.Length <= 100))
+            if (str == null)
+            {
+                Console.WriteLine("Some input parameter is null");
+                return null;
+            }
+
+            if (!Regex.IsMatch(str, ValidationException.PatternRegisterDownCheck) || (str.Length < 3 || str.Length > 100))
             {
                 Console.WriteLine("Invalid string format entered");
                 return null;
@@ -89,7 +95,13 @@ namespace TZAnagram
 
         public static string[] GetAnagramsPairs(string str)
         {
-            if (!Regex.IsMatch(str, ValidationException.PatternRegisterDownCheck) || (str.Length <= 3 && str.Length <= 100))
+            if (str == null)
+            {
+                Console.WriteLine("Some input parameter is null");
+                return null;
+            }
+
+            if (!Regex.IsMatch(str, ValidationException.PatternRegisterDownCheck) || (str.Length < 3 || str.Length > 100))
             {
                 Console.WriteLine("Invalid string format entered");
                 return null;

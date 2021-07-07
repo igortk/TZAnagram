@@ -55,10 +55,7 @@ namespace TZAnagram
 
         public List<string> GetPermutationsList(bool repeat = true)
         {
-            _permutationsList = new List<string>
-                    {
-                        _str
-                    };
+            _permutationsList = new List<string>{_str};
 
             RecPermutation(_str.ToCharArray(), _str.Length, repeat);
 

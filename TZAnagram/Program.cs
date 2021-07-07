@@ -11,7 +11,7 @@ namespace TZAnagram
 
         static void Main(string[] args)
         {
-
+            var g = Anagram.GetAnagramsPairs("aba");
         }
     }
 }
