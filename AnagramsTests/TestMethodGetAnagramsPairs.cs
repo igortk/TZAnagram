@@ -37,14 +37,24 @@ namespace AnagramsTests
         [Test]
         public void Test5()
         {
-            string[] arrayInt = {
+            string[] arrayStr = {
                 "abc",
                 "cab",
                 "acb",
                 "bca",
                 "cba",
                 "bac"};
-            Assert.AreEqual(arrayInt, Anagram.GetAnagramsPairs("abc"));
+            Assert.AreEqual(arrayStr, Anagram.GetAnagramsPairs("abc"));
+        }
+
+        [Test]
+        public void Test6()
+        {
+            string[] arrayStr = {
+                "aba",
+                "aab",
+                "baa"};
+            Assert.AreEqual(arrayStr, Anagram.GetAnagramsPairs("aba"));
         }
     }
 }

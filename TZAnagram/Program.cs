@@ -7,11 +7,9 @@ namespace TZAnagram
 {
     class Program
     {
-
-
         static void Main(string[] args)
         {
-            var g = Anagram.GetAnagramsPairs("aba");
+
         }
     }
 }

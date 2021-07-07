@@ -67,6 +67,7 @@ namespace TZAnagram
                 Console.WriteLine("Invalid string format entered");
                 return null;
             }
+
             var per = new ClassPermutation(str);
             var list = per.GetPermutationsList();
 
@@ -109,17 +110,52 @@ namespace TZAnagram
 
             var list = GetNumberAnagrams(str);
 
-            string[] anagrammaticPairs = new string[list.GetLength(0)];
+            List<string> anagrammaticPairs = new List<string>();
 
             for (int i = 0; i < list.GetLength(0); i++)
             {
+                anagrammaticPairs.Add("");
                 for (int j = 0; j < list.GetLength(1); j++)
                 {
                     anagrammaticPairs[i] += str[list[i, j]];
                 }
             }
 
-            return anagrammaticPairs;
+            return RemovingDuplicateElements(ref anagrammaticPairs);
+        }
+
+        private static string[] RemovingDuplicateElements(ref List<string> arrayStr)
+        {
+            int length = arrayStr.Count;
+
+            for (int i = 0; i < length; i++)
+            {
+                for (int j = 0; j < length; j++)
+                {
+                    if (i==j)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        if (arrayStr[i] == arrayStr[j])
+                        {
+                            arrayStr.RemoveAt(j);
+                            length--;
+                            j--;
+                        }
+                    }
+                }
+            }
+
+            string[] arrStr = new string[length];
+
+            for (int i = 0; i < length; i++)
+            {
+                arrStr[i] = arrayStr[i];
+            }
+
+            return arrStr;
         }
     }
 }
